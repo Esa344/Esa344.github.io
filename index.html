@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swiper Background</title>
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      background-color: skyblue;
+      
+    }
+    .swiper-container {
+      width: 100%;
+      height: 90%;
+    }
+    .swiper-slide {
+      background-size: cover;
+      background-position: center;
+    }
+    .permission{
+      position: fixed;
+      height: 100vh;
+      width: 100vw;
+      background-color:rgba(76, 76, 76, 0.7) ;
+      z-index: 3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    } 
+    .permission button{
+      background-color: #00C1FF;
+      border: none;
+      border-radius: 20px;
+    }
+    .navbar{
+      display: flex;
+      align-items: center;
+    }
+    .navbar img{
+      height: 30px;
+      position: fixed;
+      bottom: 20px;
+      z-index: 2;
+      background-color: gray;
+      left: 2vw;
+      padding: 4px;
+      border: none;
+      border-radius: 18px;
+      
+    }
+    .navbar h4{
+      margin-left: 50vw;
+      display: flex;
+     align-items: center;
+    }
+    .navbar h4 a{
+      margin: 5px;
+      color: white;
+      text-decoration: none;
+    }
+    
+  </style>
+</head>
+<body>
+<div class="permission" id="permission"><button onclick="start()"><b><h1>mulai</h1></b></button></div>
+<!-- Swiper -->
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide" style="background-image: url('/mg/1.png');"></div>
+    <div class="swiper-slide" style="background-image: url('/mg/2.png');"></div>
+    <div class="swiper-slide" style="background-image: url('/mg/3.png');"></div>
+    <div class="swiper-slide" style="background-image: url('/mg/4.png');"></div>
+    <div class="swiper-slide" style="background-image: url('/mg/5.png');"></div>
+    <div class="swiper-slide" style="background-image: url('/mg/6.png');"></div>
+    <div class="swiper-slide" style="background-image: url('/mg/7.png');"></div>
+    <div class="swiper-slide" style="background-image: url('/mg/8.png');"></div>
+    <div class="swiper-slide" style="background-image: url('/mg/9.png');"></div>
+    <div class="swiper-slide" style="background-image: url('/mg/10.png');"></div>
+    <div class="swiper-slide" style="background-image: url('/mg/11.png');"></div>
+    <div class="swiper-slide" style="background-image: url('/mg/12.png');"></div>
+    <div class="swiper-slide" style="background-image: url('/mg/13.png');"></div>
+    <div class="swiper-slide" style="background-image: url('/mg/14.png');"></div>
+    <div class="swiper-slide" style="background-image: url('/mg/15.png');"></div>
+    <div class="swiper-slide" style="background-image: url('/mg/16.png');"></div>
+    <div class="swiper-slide" style="background-image: url('/mg/17.png');"></div>
+    
+    <!-- Tambahkan slide dengan background-image sesuai dengan jumlah gambar yang Anda miliki -->
+  </div>
+  <!-- Add Pagination -->
+  <div class="swiper-pagination"></div>
+    <div class="navbar">
+      <img src="/mg/log.png"/>
+      <h4>
+        <a href="https://www.tiktok.com/@eza.co_ofcl?_t=8jQn3LI6Ojn&_r=1">tiktok</a>
+        <a href="https://28974f4b-25e2-4f32-a1dc-ea57b75e4694-00-1gkwqh5sa6ny4.worf.replit.dev/">my web</a>
+        <a href="/mg/index.html">mini game</a>
+      </h4>
+    </div>
+</div>
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+  const ms = new Audio('/mg/felgod.mp3')
+  let activeSlideIndex;
+  let no = 0
+  var swiper = new Swiper('.swiper-container', {
+    effect: 'slide',
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
+  function start(){
+    alert('musik akan di mainkan pastikan volume pas untuk pengalaman terbaik')
+      ms.play()
+      document.getElementById('permission').style.display='none'
+  }
+  function index(){
+    window.requestAnimationFrame(index)
+    activeSlideIndex = swiper.activeIndex;
+    if (no != 1 && activeSlideIndex == 16){
+      no += 1
+      alert('pak kalo ngasih tugas ppkn jangan terlalu banyak murid mu malah ga faham lebih baik jika cara mengajar nya seperti bu rina minggu ini nyatet minggu depan soal dan itu pun catatan nya juga ga terlalu banyak, tapi dia pasti masuk menurut ku itu cara mengajar paling enak dan mudah di mengerti!!. btw web ini aku coding sendiri😆')
+    }
+  }
+  index()
+</script>
+
+</body>
+</html>
